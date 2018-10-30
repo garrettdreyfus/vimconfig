@@ -1,0 +1,1 @@
+/home/garrett/.dotfiles/vim

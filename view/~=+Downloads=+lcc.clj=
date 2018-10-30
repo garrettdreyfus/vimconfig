@@ -1,0 +1,180 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+nmap <buffer> gf <Plug>FireplaceTabeditFile
+nmap <buffer>  <Plug>FireplaceSplitFile
+nmap <buffer> f <Plug>FireplaceSplitFile
+nmap <buffer> gd <Plug>FireplaceDtabjump
+nmap <buffer> d <Plug>FireplaceDsplit
+nmap <buffer>  <Plug>FireplaceDsplit
+nmap <buffer> K <Plug>FireplaceK
+nmap <buffer> [d <Plug>FireplaceSource
+nmap <buffer> [ <Plug>FireplaceDjump
+nmap <buffer> <silent> \p <Plug>ClojureCloseResultBuffer.
+nmap <buffer> <silent> \sR <Plug>ClojureStartLocalRepl.
+nmap <buffer> <silent> \sr <Plug>ClojureStartRepl.
+nmap <buffer> <silent> \ep <Plug>ClojureEvalParagraph.
+nmap <buffer> <silent> \et <Plug>ClojureEvalToplevel.
+vmap <buffer> <silent> \eb <Plug>ClojureEvalBlock.
+nmap <buffer> <silent> \el <Plug>ClojureEvalLine.
+nmap <buffer> <silent> \ef <Plug>ClojureEvalFile.
+nmap <buffer> <silent> \m1 <Plug>ClojureMacroExpand1.
+nmap <buffer> <silent> \me <Plug>ClojureMacroExpand.
+nmap <buffer> <silent> \rt <Plug>ClojureRunTests.
+nmap <buffer> <silent> \rF <Plug>ClojureRequireFileAll.
+nmap <buffer> <silent> \rf <Plug>ClojureRequireFile.
+nmap <buffer> <silent> \gi <Plug>ClojureGotoSourceInteractive.
+nmap <buffer> <silent> \gw <Plug>ClojureGotoSourceWord.
+nmap <buffer> <silent> \si <Plug>ClojureSourceLookupInteractive.
+nmap <buffer> <silent> \sw <Plug>ClojureSourceLookupWord.
+nmap <buffer> <silent> \mi <Plug>ClojureMetaLookupInteractive.
+nmap <buffer> <silent> \mw <Plug>ClojureMetaLookupWord.
+nmap <buffer> <silent> \fd <Plug>ClojureFindDoc.
+nmap <buffer> <silent> \ji <Plug>ClojureJavadocLookupInteractive.
+nmap <buffer> <silent> \jw <Plug>ClojureJavadocLookupWord.
+nmap <buffer> <silent> \li <Plug>ClojureDocLookupInteractive.
+nmap <buffer> <silent> \lw <Plug>ClojureDocLookupWord.
+nmap <buffer> <silent> \tr <Plug>ClojureToggleParenRainbow.
+nmap <buffer> <silent> \aw <Plug>ClojureAddToLispWords.
+nmap <buffer> ]d <Plug>FireplaceSource
+nmap <buffer> ] <Plug>FireplaceDjump
+nnoremap <buffer> <silent> cpr :if expand('%:e') ==# 'cljs'|Require|else|RunTests|endif
+nmap <buffer> cqc <Plug>FireplacePrompti
+nmap <buffer> cqp <Plug>FireplacePrompt
+nmap <buffer> cqq <Plug>FireplaceCountEdit
+nmap <buffer> cq <Plug>FireplaceEdit
+nmap <buffer> c1mm <Plug>FireplaceCount1MacroExpand
+nmap <buffer> c1m <Plug>Fireplace1MacroExpand
+nmap <buffer> cmm <Plug>FireplaceCountMacroExpand
+nmap <buffer> cm <Plug>FireplaceMacroExpand
+nmap <buffer> c!! <Plug>FireplaceCountFilter
+nmap <buffer> c! <Plug>FireplaceFilter
+nmap <buffer> cpp <Plug>FireplaceCountPrint
+nmap <buffer> cp <Plug>FireplacePrint
+nmap <buffer> gf <Plug>FireplaceEditFile
+map! <buffer> ( <Plug>FireplaceRecall
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:;\ -,mO:;\ \ ,n:;
+setlocal commentstring=;%s
+setlocal complete=.,w,b,u,t,i,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.core.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.inspector.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.java.browse.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.java.io.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.java.javadoc.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.java.shell.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.main.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.pprint.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.repl.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.set.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.stacktrace.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.string.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.template.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.test.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.test.tap.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.test.junit.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.walk.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.xml.txt,k/home/garrett/.vim/bundle/vimclojure/ftplugin/clojure/completions-clojure.zip.txt
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=youcompleteme#Complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=^\\s*(def\\w*
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'clojure'
+setlocal filetype=clojure
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=GetClojureIndent()
+setlocal indentkeys=!,o,O
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,?,-,*,!,+,/,=,<,>,.,:
+setlocal keywordprg=:Doc
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=def,def-,defn,defn-,defmacro,defmacro-,defmethod,defmulti,defonce,defvar,defvar-,defunbound,let,fn,letfn,binding,proxy,defnk,definterface,defprotocol,deftype,defrecord,reify,extend,extend-protocol,extend-type,bound-fn,if,if-not,if-let,when,when-not,when-let,when-first,condp,case,loop,dotimes,for,while,do,doto,try,catch,locking,with-in-str,with-out-str,with-open,dosync,with-local-vars,doseq,dorun,doall,->,->>,future,with-bindings,ns,clojure.core/ns,gen-class,gen-interface
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=fireplace#omnicomplete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%!airline#statusline(1)
+setlocal suffixesadd=.clj,.cljx,.cljs,.java
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'clojure'
+setlocal syntax=clojure
+endif
+setlocal tabstop=2
+setlocal tagcase=
+setlocal tags=
+setlocal termkey=
+setlocal termsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 2 - ((1 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2
+normal! 0
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :

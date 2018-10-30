@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/garrett/Projects/ServerlessRTCLib/src'
+let g:netrw_dirhist_2='/home/garrett/Projects/3dDraw/js'
+let g:netrw_dirhist_3='/home/gdreyfus/Projects'
+let g:netrw_dirhist_4='/home/gdreyfus/Projects/Oceananigans'
+let g:netrw_dirhist_5='/home/gdreyfus/Projects/Oceananigans/ArgoHurricane'
